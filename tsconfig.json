@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "types": ["node"],
+    "paths": {
+      "@img/*": ["src/assets/img/*"],
+      "@icons/*": ["src/components/icons/*"],
+      "@/*": ["src/*"]
+    },
+    "jsx": "react-jsx",
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["src", "custom.d.ts"],
+}
