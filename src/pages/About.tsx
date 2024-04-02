@@ -1,11 +1,11 @@
 import TitlePage from "@/components/TitlePage";
 import {Card} from "flowbite-react";
-import {FaCode} from "react-icons/fa";
+import {FaCode, FaUserAlt} from "react-icons/fa";
 import {MdBiotech, MdLeaderboard, MdOutlineSystemSecurityUpdateGood} from "react-icons/md";
 
 const About = () => {
     return <Card className="rounded-3xl p-10 dark:text-white">
-        <TitlePage title={'About'}/>
+        <TitlePage title={'About'} icon={<FaUserAlt className={`me-3 text-4xl text-air-force-blue`}/>}/>
         <p className={`dark:text-silver`}>
             Hello, I&apos;m Charllys de Lima, a full-stack developer and systems analyst with over seven
             years of experience in creating robust and dynamic solutions using a wide range of

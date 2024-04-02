@@ -1,7 +1,7 @@
-import PersonalInfo from "@/components/PersonalInfo";
-import Sidebar from "@/components/Sidebar";
+import PersonalInfo from "@/layouts/Personalnfo/PersonalInfo";
+import Sidebar from "@/layouts/Sidebar/Sidebar";
 import {Flowbite} from "flowbite-react";
-import About from "@/pages/about";
+import About from "@/pages/About";
 
 
 function App() {

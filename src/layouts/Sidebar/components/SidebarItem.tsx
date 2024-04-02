@@ -12,7 +12,7 @@ const SidebarItem: React.FC<IProps> = (props) => {
     const match = useMatch({path: resolved.pathname, end: true});
 
     return <li
-        className={`p-1 md:p-3 flex items-center rounded-lg shadow-lg bg-anti-flash-white hover:text-anti-flash-white hover:bg-brandeis-blue dark:hover:bg-brandeis-blue w-full dark:bg-eerie-black dark:text-white ${match ? 'bg-brandeis-blue dark:bg-brandeis-blue text-anti-flash-white' : ''}`}>
+        className={`p-1 md:p-3 flex items-center rounded-lg shadow-lg bg-anti-flash-white hover:text-anti-flash-white hover:bg-midnight-green dark:hover:bg-midnight-green w-full dark:bg-eerie-black dark:text-white ${match ? 'bg-midnight-green dark:bg-midnight-green text-anti-flash-white' : ''}`}>
         <NavLink to={props.href} className={`w-full text-center flex flex-col items-center`}>
             {props.icon}
             {props.text}
