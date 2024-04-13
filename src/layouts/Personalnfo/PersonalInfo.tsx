@@ -12,7 +12,7 @@ const PersonalInfo = () => {
         <Card className={`flex flex-col gap-4 items-center justify-center p-4 rounded-3xl`}>
             <div className={`text-center flex flex-col gap-4 items-center`}>
                 <img src={myImage} alt="Foto pessoal"
-                     className={`rounded-3xl w-[240px] h-[240px] mt-[-140px]`}/>
+                     className={`rounded-3xl w-[240px] h-[240px] mt-[-110px]`}/>
                 <h4 className="font-bold text-2xl dark:text-white">Charllys de Lima</h4>
                 <span
                     className={`bg-anti-flash-white dark:bg-eerie-black dark:text-silver p-2 rounded-lg font-semibold w-48`}>Full-Stack Developer</span>

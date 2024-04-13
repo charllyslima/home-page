@@ -7,9 +7,9 @@ import {RiContactsBook2Fill} from "react-icons/ri";
 const sidebar = () => {
 
 
-    return <Card className="lg:rounded-3xl">
+    return <Card className="xl:rounded-3xl lg:h-auto">
         <nav className="p-1 md:p-5">
-            <ul className={`lg:space-y-3 sm:space-x-3 lg:space-x-0 flex lg:flex-col sm:justify-between`}>
+            <ul className={`xl:space-y-3 sm:space-x-3 xl:space-x-0 flex xl:flex-col sm:justify-between`}>
                 <SidebarItem href='/' icon={<FaUserAlt className={`text-2xl`}/>} text={'About'}/>
                 <SidebarItem href='/resume' icon={<FaFileAlt className={`text-2xl`}/>} text={'Resume'}/>
                 <SidebarItem href='/works' icon={<MdWork className={`text-2xl`}/>} text={'Works'}/>
