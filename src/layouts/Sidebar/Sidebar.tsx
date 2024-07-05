@@ -15,9 +15,9 @@ const sidebar = () => {
                 <SidebarItem href='/works' icon={<MdWork className={`text-2xl`}/>} text={'Works'}/>
                 <SidebarItem href='/blog' icon={<FaBlogger className={`text-2xl`}/>} text={'Blog'}/>
                 <SidebarItem href='/contact' icon={<RiContactsBook2Fill className={`text-2xl`}/>} text={'Contact'}/>
-                <li className="text-center rounded-lg shadow-lg">
+                <li className="text-center flex flex-col justify-center bg-transparent">
                     <DarkThemeToggle
-                        className={'w-full h-full flex justify-center items-center dark:bg-eerie-black hover:bg-midnight-green dark:hover:bg-midnight-green hover:text-white'}/>
+                        className={'w-full hover:bg-delftBlue-600 hover:dark:bg-delftBlue-600 hover:text-white rounded-full shadow-lg'}/>
                 </li>
 
             </ul>

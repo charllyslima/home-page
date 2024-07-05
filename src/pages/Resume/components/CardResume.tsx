@@ -13,7 +13,7 @@ const CardResume: React.FC<ICardResume> = ({side, h1, h2, h3}) => {
     let bg = 'bg-silver dark:bg-gunmetal'
 
     if (side === "right") {
-        bg = 'bg-powder-blue dark:bg-outer-space'
+        bg = ''
     }
 
     return <Card className={`${bg} p-5 min-h-[140px]`}>

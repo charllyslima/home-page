@@ -3,15 +3,17 @@ import TitlePage from "@/components/TitlePage";
 import {FaFileAlt, FaUserGraduate} from "react-icons/fa";
 import {MdWorkHistory} from "react-icons/md";
 import CardResume from "@/pages/Resume/components/CardResume";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import Transition from "@/components/Transition";
 import {isMobileDevice} from "@/utils/ResponsiveFunctions";
-import ProgressBar from "@/components/ProgressBar";
-import {Link, Outlet, useMatch, useResolvedPath} from "react-router-dom";
 import MenuItem from "@/pages/Resume/components/menu/MenuItem";
+import KnowledgeContent from "@/pages/Resume/components/KnowledgeContent";
 
 
 const Resume = () => {
+
+    const [knowledge, setKnowLedge] = useState('web-development')
+
     useEffect(() => {
         if (isMobileDevice()) {
             const element = document.getElementById('resume');
@@ -20,9 +22,7 @@ const Resume = () => {
             }
         }
     }, []);
-    const resolved = useResolvedPath('web-development');
-    const match = useMatch({path: resolved.pathname, end: true});
-    console.log(match)
+
     return <Transition>
         <Card className="rounded-3xl p-10 dark:text-white" id={`resume`}>
             <TitlePage title={'Resume'} icon={<FaFileAlt className={`me-3 text-4xl text-air-force-blue`}/>}/>
@@ -30,7 +30,7 @@ const Resume = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mx-2 mb-10">
                 <div className="space-y-5">
                     <h1 className="text-2xl font-semibold flex items-center gap-3">
-                        <FaUserGraduate className="text-3xl text-ash-gray"/>
+                        <FaUserGraduate className="text-3xl"/>
                         Education
                     </h1>
                     <CardResume side="left" h1="Postgraduate degree, IT Governance" h2="2023 - 2024" h3="GRAN"/>
@@ -44,7 +44,7 @@ const Resume = () => {
                 </div>
                 <div className="space-y-5">
                     <h1 className="text-2xl font-semibold flex items-center gap-3">
-                        <MdWorkHistory className="text-3xl text-ash-gray"/>
+                        <MdWorkHistory className="text-3xl"/>
                         Experience
                     </h1>
                     <CardResume side="right" h1="Full Stack Developer" h2="2022 - Present" h3="GRAN"/>
@@ -55,22 +55,24 @@ const Resume = () => {
             </div>
 
             <div className="flex flex-wrap mx-2">
-                <div className="w-full md:w-1/2 px-2 space-y-5">
+                <div className="w-full md:w-1/2 px-2 space-y-5 mb-3">
                     <h1 className="text-2xl font-semibold flex">
                         Working Skills
                     </h1>
-                    <Outlet/>
+                    <KnowledgeContent knowledge={knowledge}/>
                 </div>
                 <div className="w-full md:w-1/2 px-2 space-y-5">
                     <h1 className="text-2xl font-semibold flex">
-                        Knowledges
+                        Knowledge
                     </h1>
                     <div className="flex flex-wrap justify-between w-full">
-                        <MenuItem href={`web-development`} text={`Web Development`} />
-                        <MenuItem href={`database`} text={`Database`} />
-                        <MenuItem href={`devops`} text={`Devops`} />
-                        <MenuItem href={`frontend`} text={`FrontEnd`} />
-                        <MenuItem href={`backend`} text={`Backend`} />
+                        <MenuItem value={`web-development`} text={`Web Development`}
+                                  onClick={() => setKnowLedge(`web-development`)}/>
+                        <MenuItem value={`database`} text={`Database`} onClick={() => setKnowLedge(`database`)}/>
+                        <MenuItem value={`frontend`} text={`FrontEnd`} onClick={() => setKnowLedge(`frontend`)}/>
+                        <MenuItem value={`backend`} text={`Backend`} onClick={() => setKnowLedge(`backend`)}/>
+                        <MenuItem value={`devops`} text={`Devops`} onClick={() => setKnowLedge(`devops`)}/>
+                        <MenuItem value={`mobile`} text={`Mobile`} onClick={() => setKnowLedge(`mobile`)}/>
                     </div>
 
                 </div>

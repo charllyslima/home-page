@@ -1,0 +1,88 @@
+{
+  "pt": {
+    "personal_information": {
+      "name": "Charllys de Lima",
+      "role": "Fill-Stack Developer",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/charllyslima",
+        "github": "https://github.com/charllyslima",
+        "medium": "https://medium.com/@charllys.lima"
+      },
+      "phone_number": "+55 84 9 9475 - 3159",
+      "email": "charllys.lima@outlook.com",
+      "location": "Rio de Janeiro, Brazil",
+      "birthday": "Set 8, 1995",
+      "link_cv": ""
+    },
+    "about": {
+      "description": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+      "what_i_do": [
+        {
+          "icon": {
+            "name": "FaCode",
+            "color": "#d566ff"
+          },
+          "title": "Web Development & Design",
+          "description": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+        },
+        {
+          "icon": {
+            "name": "MdOutlineSystemSecurityUpdateGood",
+            "color": "#dda10c"
+          },
+          "title": "System Integration & Optimization",
+          "description": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+        },
+        {
+          "icon": {
+            "name": "MdLeaderboard",
+            "color": "#8774ff"
+          },
+          "title": "Leadership in Technology",
+          "description": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+        },
+        {
+          "icon": {
+            "name": "MdBiotech",
+            "color": "#ff6080"
+          },
+          "title": "System Integration & Optimization",
+          "description": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+        }
+      ]
+    },
+    "resume": {
+      "education": [
+        {
+          "title": "",
+          "school": "",
+          "date_ini": "",
+          "date_fin": ""
+        }
+      ],
+      "experience": [
+        {
+          "role": "",
+          "company": "",
+          "date_ini": "",
+          "date_fin": ""
+        }
+      ],
+      "knowledge": {
+        "title": "",
+        "skills": [
+          {
+            "title": "",
+            "years": 0,
+            "sub_item": [
+              {
+                "title": "",
+                "years": 0
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

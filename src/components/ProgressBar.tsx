@@ -12,8 +12,8 @@ const ProgressBar: React.FC<IProgressBar> = ({title, currentYear, maxYears = 10,
     const progressPercentage = Math.min((currentYear / maxYears) * 100, 100)
 
     return (
-        <div className={small ? 'ps-5' : 'ps-0'}>
-            <div className={`flex justify-between items-center mb-3`}>
+        <div className={`${small ? 'ps-5' : 'ps-0'} mt-1`}>
+            <div className={`flex justify-between items-center mb-1`}>
                 <h1 className={`${small ? 'text-sm' : 'text-lg'} font-semibold`}>{title}</h1>
                 <h2 className={`text-xs`}>{currentYear} years</h2>
             </div>
