@@ -54,35 +54,199 @@
     "resume": {
       "education": [
         {
-          "title": "",
-          "school": "",
-          "date_ini": "",
-          "date_fin": ""
+          "title": "Postgrad. degree, IT Governance",
+          "school": "GRAN",
+          "date_ini": "2023",
+          "date_fin": "2024"
+        },
+        {
+          "title": "Postgrad. degree, Big Data",
+          "school": "Descomplica Faculdade Digital",
+          "date_ini": "2021",
+          "date_fin": "2022"
+        },
+        {
+          "title": "Postgrad. degree, SI Projects",
+          "school": "Descomplica Faculdade Digital",
+          "date_ini": "2021",
+          "date_fin": "2022"
+        },
+        {
+          "title": "Bachelor's degree, Info. Systems",
+          "school": "Universidade Potiguar",
+          "date_ini": "2017",
+          "date_fin": "2020"
         }
       ],
       "experience": [
         {
-          "role": "",
-          "company": "",
-          "date_ini": "",
-          "date_fin": ""
+          "role": "Full Stack Developer",
+          "company": "GRAN",
+          "date_ini": "2022",
+          "date_fin": "Present"
+        },
+        {
+          "role": "Full Stack Developer",
+          "company": "BRQ Digital Solutions",
+          "date_ini": "2022",
+          "date_fin": "2022"
+        },
+        {
+          "role": "Full Stack Developer",
+          "company": "Wipro",
+          "date_ini": "2021",
+          "date_fin": "2022"
+        },
+        {
+          "role": "Full Stack Developer",
+          "company": "Inovall",
+          "date_ini": "2018",
+          "date_fin": "2021"
         }
       ],
-      "knowledge": {
-        "title": "",
-        "skills": [
-          {
-            "title": "",
-            "years": 0,
-            "sub_item": [
-              {
-                "title": "",
-                "years": 0
-              }
-            ]
-          }
-        ]
-      }
+      "knowledge": [
+        {
+          "title": "Web Development",
+          "skills": [
+            {
+              "title": "PHP",
+              "startDate": "2014-10-01",
+              "sub_item": [
+                {
+                  "title": "Laravel",
+                  "startDate": "2022-06-01",
+                  "endDate": "2022-06-01"
+                },
+                {
+                  "title": "Zend",
+                  "startDate": "2022-06-01",
+                  "endDate": "2022-06-01"
+                },
+                {
+                  "title": "Yii2",
+                  "startDate": "2022-06-01",
+                  "endDate": "2022-06-01"
+                }
+              ]
+            },
+            {
+              "title": "JavaScript & TypeScript",
+              "startDate": 8,
+              "sub_item": [
+                {
+                  "title": "Angular",
+                  "startDate": 2
+                },
+                {
+                  "title": "React",
+                  "startDate": 2
+                },
+                {
+                  "title": "Next.JS",
+                  "startDate": 2
+                },
+                {
+                  "title": "Vue.js",
+                  "startDate": 2
+                },
+                {
+                  "title": "jQuery",
+                  "startDate": 4.4
+                }
+              ]
+            },
+            {
+              "title": "Banco de dados",
+              "startDate": 8,
+              "sub_item": [
+                {
+                  "title": "MySQL",
+                  "startDate": 2
+                },
+                {
+                  "title": "SQL Server",
+                  "startDate": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Frontend",
+          "skills": [
+            {
+              "title": "Teste",
+              "startDate": 0,
+              "sub_item": [
+                {
+                  "title": "teste",
+                  "startDate": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Backend",
+          "skills": [
+            {
+              "title": "",
+              "years": 0,
+              "sub_item": [
+                {
+                  "title": "",
+                  "years": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Database",
+          "skills": [
+            {
+              "title": "",
+              "years": 0,
+              "sub_item": [
+                {
+                  "title": "",
+                  "years": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Mobile Development",
+          "skills": [
+            {
+              "title": "",
+              "years": 0,
+              "sub_item": [
+                {
+                  "title": "",
+                  "years": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Web Scraping",
+          "skills": [
+            {
+              "title": "",
+              "years": 0,
+              "sub_item": [
+                {
+                  "title": "",
+                  "years": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   }
 }

@@ -1,41 +1,25 @@
-import React, {Suspense, useEffect, useState, startTransition} from 'react';
+import React from 'react';
+import ProgressBar from "@/components/ProgressBar";
+import {Skill} from "@/entities";
 
-const WebDeveloper = React.lazy(() => import('@/pages/Resume/components/skills/WebDeveloper'));
-const Database = React.lazy(() => import('@/pages/Resume/components/skills/Database'));
-const Devops = React.lazy(() => import('@/pages/Resume/components/skills/Devops'));
-const Frontend = React.lazy(() => import('@/pages/Resume/components/skills/Frontend'));
-const Backend = React.lazy(() => import('@/pages/Resume/components/skills/Backend'));
 
 interface KnowledgeContentProps {
-    knowledge: string;
+    skills: Skill[];
 }
 
-const componentMap: { [key: string]: React.LazyExoticComponent<React.FC> } = {
-    'web-development': WebDeveloper,
-    'database': Database,
-    'devops': Devops,
-    'frontend': Frontend,
-    'backend': Backend,
-};
-
-const KnowledgeContent: React.FC<KnowledgeContentProps> = ({knowledge}) => {
-
-    const [Component, setComponent] = useState<React.LazyExoticComponent<React.FC> | null>(null);
-
-    useEffect(() => {
-        startTransition(() => {
-            setComponent(componentMap[knowledge] || null);
-        });
-    }, [knowledge]);
+const KnowledgeContent: React.FC<KnowledgeContentProps> = ({skills}) => {
 
     return (
-        <Suspense fallback={<div>Loading...</div>}>
-            {Component ? (
-                <Component/>
-            ) : (
-                <div>Component not found</div>
-            )}
-        </Suspense>
+        <div>
+            {skills.map((el, i) => (
+                <div key={i}>
+                    <ProgressBar title={el.title} startDate={el.startDate} maxYears={10} />
+                    {el.sub_item.map((subItem, j) => (
+                        <ProgressBar title={subItem.title} startDate={subItem.startDate} maxYears={10} small={true} key={j} />
+                    ))}
+                </div>
+            ))}
+        </div>
     );
 }
 

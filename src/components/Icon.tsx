@@ -14,6 +14,7 @@ const iconLibraries: { [key: string]: () => Promise<IconLibraryModule> } = {
     md: () => import('react-icons/md') as unknown as Promise<IconLibraryModule>,
     ai: () => import('react-icons/ai') as unknown as Promise<IconLibraryModule>,
     io: () => import('react-icons/io') as unknown as Promise<IconLibraryModule>,
+    hi: () => import('react-icons/hi') as unknown as Promise<IconLibraryModule>,
 };
 
 const loadIcon = async (iconName: string): Promise<{ default: React.ComponentType<React.SVGProps<SVGSVGElement>> }> => {
@@ -34,10 +35,10 @@ const loadIcon = async (iconName: string): Promise<{ default: React.ComponentTyp
 
 const IconLoader: React.FC<IconProps> = ({iconName, color}) => {
     const IconComponent = lazy(() => loadIcon(iconName));
-    console.log(color)
+
     return (
         <Suspense fallback={<div>Loading...</div>}>
-            <IconComponent className={`me-3 size-16 xl:size-10`} style={{color: color}}/>
+            <IconComponent className={`me-3 w-[40px] h-[40px]`} style={{color: color}}/>
         </Suspense>
     );
 };

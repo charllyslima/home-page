@@ -1,9 +1,9 @@
 // reducers/index.ts
 import { combineReducers } from '@reduxjs/toolkit';
-import jsonReducer from './JsonReducer';
+import languageSlice from "@/reducers/LanguageSlice";
 
 const rootReducer = combineReducers({
-    json: jsonReducer
+    language: languageSlice
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

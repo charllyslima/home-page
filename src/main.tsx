@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/main.scss';
 import AppRouter from '@/router';
-import { Provider } from 'react-redux';
-import store from './store';
+import {Provider} from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import { store, persistor } from './store';
 
 const rootElement = document.getElementById('root');
 
@@ -13,7 +14,9 @@ if (rootElement) {
     root.render(
         <React.StrictMode>
             <Provider store={store}>
-                <AppRouter />
+                <PersistGate loading={null} persistor={persistor}>
+                    <AppRouter/>
+                </PersistGate>
             </Provider>
         </React.StrictMode>
     );

@@ -1,34 +1,35 @@
 import myImage from "@img/me.webp";
-import {FaCalendarAlt, FaFacebookF, FaGithub, FaLinkedinIn, FaMapMarkerAlt} from "react-icons/fa";
+import {FaCalendarAlt, FaMapMarkerAlt} from "react-icons/fa";
 import {IoMailOpenSharp} from "react-icons/io5";
 import {Button, Card} from "flowbite-react";
 import {HiCloudDownload} from "react-icons/hi";
 import {MdOutlinePhoneAndroid} from "react-icons/md";
 import Icon from "@/layouts/Personalnfo/components/Icon";
 import SocialButtons from "@/layouts/Personalnfo/components/SocialButtons";
-import {useSelector} from "react-redux";
-import {RootState} from "@/reducers";
-import {RootObject} from "@/entities";
-import Transition from "@/components/Transition";
-import Loader from "@/components/Loader";
 import Separator from "@/layouts/Personalnfo/components/Separator";
+import {LanguageMap, Languages} from "@/constants/languages";
+import useLanguage from "@/hooks/useLanguage";
 
 const PersonalInfo = () => {
-    const jsonData = useSelector<RootState, RootObject | null>((state) => state.json.data);
-    if (!jsonData) {
-        return <Transition>
-            <Loader/>
-        </Transition>;
-    }
-    const personalInfo = jsonData.pt.personal_information
+    const language = useLanguage()
+    const role: LanguageMap<string> = {
+        [Languages.ENGLISH]: 'Systems Analyst',
+        [Languages.PORTUGUESE_BRAZILIAN]: 'Analista de Sistemas',
+        [Languages.SPANISH]: 'Analista de Sistemas',
+    };
+    const birthday: LanguageMap<string> = {
+        [Languages.ENGLISH]: 'September 8, 1995',
+        [Languages.PORTUGUESE_BRAZILIAN]: '08 September 1995',
+        [Languages.SPANISH]: '08 Septiembre 1995',
+    };
     return <>
         <Card className={`flex flex-col gap-4 items-center justify-center p-4 rounded-3xl`}>
             <div className={`text-center flex flex-col gap-1 items-center`}>
                 <img src={myImage} alt="Foto pessoal"
                      className={`rounded-3xl w-[240px] h-[240px] mt-[-110px]`}/>
-                <h2 className="poppins-semibold text-xl dark:text-white">{personalInfo.name}</h2>
+                <h2 className="poppins-semibold text-xl dark:text-white">Charllys de Lima</h2>
                 <h3
-                    className={`text-gunmetal-500 dark:text-ghostWhite-700 rounded-lg poppins-light`}>{personalInfo.role}</h3>
+                    className={`text-gunmetal-500 dark:text-ghostWhite-700 rounded-lg poppins-light`}>{role[language]}</h3>
             </div>
             <div className={`flex justify-center items-center h-full`}>
                 <SocialButtons/>
@@ -42,7 +43,7 @@ const PersonalInfo = () => {
                         </div>
                         <div className={'w-10/12'}>
                             <span className={`text-payne-s-grey dark:text-silver text-xs font-light`}>Phone</span>
-                            <p className={`font-base text-base dark:text-white`}>{personalInfo.phone_number}</p>
+                            <p className={`font-base text-base dark:text-white`}>+55 84 9 9475 - 3159</p>
                         </div>
                     </div>
                     <Separator/>
@@ -54,7 +55,7 @@ const PersonalInfo = () => {
                         <div className={'w-10/12'}>
                             <span className={`text-payne-s-grey dark:text-silver text-xs font-light`}>Email</span>
                             <a href="mailto:charllys.lima@outlook.com">
-                                <p className={`font-base text-base break-words dark:text-white`}>{personalInfo.email}</p>
+                                <p className={`font-base text-base break-words dark:text-white`}>charllys.lima@outlook.com</p>
                             </a>
                         </div>
                     </div>
@@ -66,7 +67,7 @@ const PersonalInfo = () => {
                         </div>
                         <div className={'w-10/12'}>
                             <span className={`text-payne-s-grey dark:text-silver text-xs font-light`}>Location</span>
-                            <p className={`text-base break-words dark:text-white`}>{personalInfo.location}</p>
+                            <p className={`text-base break-words dark:text-white`}>Rio de Janeiro - RJ</p>
                         </div>
                     </div>
                     <Separator/>
@@ -77,13 +78,13 @@ const PersonalInfo = () => {
                         </div>
                         <div className={'w-10/12'}>
                             <span className={`text-payne-s-grey dark:text-silver text-xs font-light`}>Birthday</span>
-                            <p className={`text-base break-words dark:text-white`}>{personalInfo.birthday}</p>
+                            <p className={`text-base break-words dark:text-white`}>{birthday[language]}</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div className={`text-center flex flex-col items-center`}>
-                <a href={personalInfo.link_cv}>
+                <a href={`#`}>
                     <Button size={`lg`}
                             className={`bg-delftBlue-500 dark:bg-delftBlue-600 hover:bg-delftBlue-1000 dark:hover:bg-delftBlue-700 border-0`}>
                         <HiCloudDownload className="mr-2 h-5 w-5"/>
