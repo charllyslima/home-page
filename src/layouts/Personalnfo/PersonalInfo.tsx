@@ -1,13 +1,13 @@
-import myImage from "@img/me.webp";
+import myImage from "@img/me.jpg";
 import {FaCalendarAlt, FaMapMarkerAlt} from "react-icons/fa";
 import {IoMailOpenSharp} from "react-icons/io5";
-import {Button, Card} from "flowbite-react";
+import {Button} from "flowbite-react";
 import {HiCloudDownload} from "react-icons/hi";
 import {MdOutlinePhoneAndroid} from "react-icons/md";
 import Icon from "@/layouts/Personalnfo/components/Icon";
 import SocialButtons from "@/layouts/Personalnfo/components/SocialButtons";
 import Separator from "@/layouts/Personalnfo/components/Separator";
-import {LanguageMap, Languages} from "@/constants/languages";
+import {LanguageMap, Languages} from "@/constants/Languages";
 import useLanguage from "@/hooks/useLanguage";
 
 const PersonalInfo = () => {
@@ -23,7 +23,8 @@ const PersonalInfo = () => {
         [Languages.SPANISH]: '08 Septiembre 1995',
     };
     return <>
-        <Card className={`flex flex-col gap-4 items-center justify-center p-4 rounded-3xl`}>
+        <div
+            className={`flex flex-col gap-4 items-center justify-center p-4 rounded-3xl bg-white dark:bg-spaceCadet-900`}>
             <div className={`text-center flex flex-col gap-1 items-center`}>
                 <img src={myImage} alt="Foto pessoal"
                      className={`rounded-3xl w-[240px] h-[240px] mt-[-110px]`}/>
@@ -35,7 +36,7 @@ const PersonalInfo = () => {
                 <SocialButtons/>
             </div>
             <div className={`w-full px-4`}>
-                <div className={`p-3 w-full rounded-lg bg-gunmetal-100 dark:bg-gunmetal-900 py-5`}>
+                <div className={`p-3 w-full rounded-lg bg-gunmetal-100 dark:bg-gunmetal-800 py-5`}>
                     <div className="flex my-2.5 gap-3">
                         <div>
                             <Icon icon={<MdOutlinePhoneAndroid className={'w-10 h-10'}/>}
@@ -92,7 +93,7 @@ const PersonalInfo = () => {
                     </Button>
                 </a>
             </div>
-        </Card>
+        </div>
     </>
 }
 

@@ -1,7 +1,7 @@
 import {setLanguage} from "@/reducers/LanguageSlice";
 import {useDispatch, useSelector} from 'react-redux';
 import {AppDispatch, RootState} from '@/store';
-import {LanguageFlags, Languages} from "@/constants/languages";
+import {LanguageFlags, Languages} from "@/constants/Languages";
 
 interface LanguageButtonProps {
     className?: string

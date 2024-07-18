@@ -15,6 +15,11 @@ const iconLibraries: { [key: string]: () => Promise<IconLibraryModule> } = {
     ai: () => import('react-icons/ai') as unknown as Promise<IconLibraryModule>,
     io: () => import('react-icons/io') as unknown as Promise<IconLibraryModule>,
     hi: () => import('react-icons/hi') as unknown as Promise<IconLibraryModule>,
+    lu: () => import('react-icons/lu') as unknown as Promise<IconLibraryModule>,
+    pi: () => import('react-icons/pi') as unknown as Promise<IconLibraryModule>,
+    si: () => import('react-icons/si') as unknown as Promise<IconLibraryModule>,
+    gi: () => import('react-icons/gi') as unknown as Promise<IconLibraryModule>,
+    gr: () => import('react-icons/gr') as unknown as Promise<IconLibraryModule>,
 };
 
 const loadIcon = async (iconName: string): Promise<{ default: React.ComponentType<React.SVGProps<SVGSVGElement>> }> => {

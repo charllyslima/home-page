@@ -14,7 +14,7 @@ const SidebarItem: React.FC<IProps> = (props) => {
     return <li
         className={`w-full`}>
         <NavLink to={props.href}
-                 className={`p-1 md:p-3 flex items-center rounded-lg shadow-lg hover:text-anti-flash-white hover:bg-delftBlue-700 dark:hover:bg-delftBlue-700 w-full dark:text-white ${match ? 'bg-delftBlue-600 text-anti-flash-white' : ''}`}>
+                 className={`p-1 md:p-3 flex items-center rounded-lg shadow-lg hover:text-anti-flash-white hover:bg-delftBlue-700 dark:hover:bg-delftBlue-700 w-full dark:text-white ${match ? 'bg-delftBlue-600 text-anti-flash-white' : 'bg-periwinkle-100 dark:bg-gunmetal-700'}`}>
             <span className={`w-full text-center flex flex-col items-center`}>
                 {props.icon}
                 {props.text}
