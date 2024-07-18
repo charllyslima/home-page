@@ -34,7 +34,7 @@ const Resume = () => {
                     </h1>
                     {education[language].map((el, index) => {
                         return (
-                            <CardResume side={`${index % 2 == 0 ? 'left' : 'right'}`} key={index}
+                            <CardResume side={`${index % 2 == 0 ? 'left' : 'right'}`} key={index} index={index}
                                         h1={el.title} h2={`${el.date_ini} - ${el.date_fin}`} h3={el.school}
                                         star={el.star}/>
                         );
@@ -48,7 +48,7 @@ const Resume = () => {
                     </h1>
                     {experience[language].map((el, index) => {
                         return (
-                            <CardResume side={`${index % 2 == 0 ? 'right' : 'left'}`} key={index}
+                            <CardResume side={`${index % 2 == 0 ? 'right' : 'left'}`} key={index} index={index}
                                         h1={el.role} h2={`${el.date_ini} - ${el.date_fin}`} h3={el.company}/>
                         );
                     })}

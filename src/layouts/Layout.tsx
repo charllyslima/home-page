@@ -58,9 +58,7 @@ const Layout: React.FC<LayoutProps> = ({children}) => {
                             <header className={`px-10 pt-10`}>
                                 <TitlePage title={pageTitle}/>
                             </header>
-                            <motion.div layout>
-                                {children}
-                            </motion.div>
+                            {children}
                             <footer
                                 className="p-8 bg-ghostWhite-500 dark:bg-gunmetal-700 rounded-bl-3xl rounded-b-3xl">
                                 <p className="text-center text-gunmetal-400">

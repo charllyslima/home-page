@@ -94,7 +94,7 @@ export const whatIDoItems: LanguageMapArray<{ title: string, description: string
         },
         {
             title: 'Design UI/UX',
-            description: 'Projeto interfaces de usuário intuitivas e experiências de usuário atraentes, focando na usabilidade e na estética para garantir a satisfação do usuário.',
+            description: 'Projeto interfaces intuitivas com experiências de usuário atraentes, focando na usabilidade e na estética para garantir a satisfação do usuário.',
             icon: uiUxIcon
         },
         {

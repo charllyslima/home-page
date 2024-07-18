@@ -55,7 +55,7 @@ export const education: LanguageMapArray<{
         },
         {
             title: educationTitles.bachelorsInfoSystems[Languages.PORTUGUESE_BRAZILIAN],
-            star: 'Prêmio de láurea por ser o aluno aluna com as melhores notas.',
+            star: 'Prêmio de láurea por ser o aluno com as melhores notas.',
             ...commonEducationData.bachelorsInfoSystems,
         },
     ],
@@ -74,7 +74,7 @@ export const education: LanguageMapArray<{
         },
         {
             title: educationTitles.bachelorsInfoSystems[Languages.SPANISH],
-            star: 'Premio de laurea por ser el alumno alumna con las mejores notas.',
+            star: 'Premio de laurea por ser el alumno con las mejores notas.',
             ...commonEducationData.bachelorsInfoSystems,
         },
     ],

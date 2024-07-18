@@ -17,20 +17,23 @@ const About = () => {
             {whatIDoItems[language].map((el, index) => {
                 return (
                     <motion.button
-                        whileHover={{scale: 0.95}}
+                        whileHover={{scale: 0.9}}
                         whileTap={{scale: 0.8}}
                         key={index}
+                        className="w-full"
                     >
-                        <Card className="max-w-md p-3 justify-start"
-                              style={{backgroundColor: el.icon.color + '12'}} horizontal>
+                        <div
+                            className="max-w-md p-3 justify-start flex flex-col h-full rounded shadow gap-3"
+                            style={{backgroundColor: el.icon.color + '12'}}
+                        >
                             <h1 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white flex items-center">
                                 <IconLoader color={el.icon.color} iconName={el.icon.name}/>
                                 {el.title}
                             </h1>
-                            <p className="poppins-regular text-gray-700 dark:text-gray-400 text-start text-base pb-3">
+                            <p className="poppins-regular text-gray-700 dark:text-gray-400 text-start text-base pb-3 flex-grow">
                                 {el.description}
                             </p>
-                        </Card>
+                        </div>
                     </motion.button>
                 );
             })}
