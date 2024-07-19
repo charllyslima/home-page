@@ -9,7 +9,7 @@ import {domAnimation, LazyMotion, m} from "framer-motion";
 const About = lazy(() => import('@/pages/About/About'));
 const Resume = lazy(() => import('@/pages/Resume/Resume'));
 const Works = lazy(() => import('@/pages/Works'));
-const Contact = lazy(() => import('@/pages/Contact'));
+const Contact = lazy(() => import('@/pages/Contact/Contact'));
 
 const AppRouter: React.FC = () => (
     <Router basename={ListRoutes.BASE_NAME}>

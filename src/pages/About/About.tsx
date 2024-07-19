@@ -1,4 +1,3 @@
-import {Card} from "flowbite-react";
 import useLanguage from "@/hooks/useLanguage";
 import IconLoader from "@/components/Icon";
 import {descriptions, whatIDo, whatIDoItems} from "@/pages/About/content/ContentAbout";
@@ -9,7 +8,7 @@ const About = () => {
     const language = useLanguage();
 
     return <section className="px-10 py-3 space-y-7" id={`about`}>
-        <p className={`dark:text-silver text-gunmetal-500 flex flex-col gap-4`}
+        <p className={`dark:text-silver text-gunmetal-500 dark:text-greyScale-500 flex flex-col gap-4`}
            dangerouslySetInnerHTML={{__html: descriptions[language]}}/>
         <h1 className={`text-3xl montserrat-semibold dark:text-white`}>{whatIDo[language]}</h1>
 
