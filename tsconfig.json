@@ -8,7 +8,13 @@
       "@/*": ["src/*"]
     },
     "jsx": "react-jsx",
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2015",
+    "lib": ["DOM", "ES2015"],
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": true
   },
-  "include": ["src", "custom.d.ts"],
+  "include": ["src", "custom.d.ts", "declarations.d.ts"],
 }

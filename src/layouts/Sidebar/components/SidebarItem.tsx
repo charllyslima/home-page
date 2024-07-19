@@ -9,13 +9,17 @@ interface IProps {
 
 const SidebarItem: React.FC<IProps> = (props) => {
     const resolved = useResolvedPath(props.href);
-    const match = useMatch({path: resolved.pathname, end: false});
+    const match = useMatch({path: resolved.pathname, end: true});
 
     return <li
-        className={`p-1 md:p-3 flex items-center rounded-lg shadow-lg bg-anti-flash-white hover:text-anti-flash-white hover:bg-midnight-green dark:hover:bg-midnight-green w-full dark:bg-eerie-black dark:text-white ${match ? 'bg-midnight-green dark:bg-midnight-green text-anti-flash-white' : ''}`}>
-        <NavLink to={props.href} className={`w-full text-center flex flex-col items-center`}>
-            {props.icon}
-            {props.text}
+        className={`w-full`}>
+        <NavLink to={props.href}
+                 className={`p-1 md:p-3 flex items-center rounded-lg shadow-lg hover:text-white hover:bg-delftBlue-700 dark:hover:bg-delftBlue-700 w-full dark:text-white duration-300 transition ${match ? 'bg-delftBlue-600 text-white' : 'bg-periwinkle-100 dark:bg-gunmetal-700'}`}>
+            <span className={`w-full text-center flex flex-col items-center`}>
+                {props.icon}
+                {props.text}
+            </span>
+
         </NavLink>
     </li>
 }
