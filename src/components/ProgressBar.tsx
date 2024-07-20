@@ -1,5 +1,7 @@
 import React from 'react';
 import {motion} from "framer-motion";
+import useLanguage from "@/hooks/useLanguage";
+import {LanguageMap, Languages} from "@/constants/Languages";
 
 interface IProgressBar {
     title: string;
@@ -10,7 +12,7 @@ interface IProgressBar {
 
 const ProgressBar: React.FC<IProgressBar> = ({title, years, maxYears = 10, small = false}) => {
     const progressPercentage = Math.min((years / maxYears) * 100, 100);
-
+    const language = useLanguage()
     const key = `${title}-${years}-${maxYears}-${small}`;
     let color = 'dark:bg-[#32C2FB] bg-[#258DB7]'
     if (progressPercentage >= 100) {
@@ -19,12 +21,18 @@ const ProgressBar: React.FC<IProgressBar> = ({title, years, maxYears = 10, small
         color = 'bg-amber-400'
     }
 
+    const yearsTitle: LanguageMap<string> = {
+        [Languages.ENGLISH]: 'Years',
+        [Languages.PORTUGUESE_BRAZILIAN]: 'Anos',
+        [Languages.SPANISH]: 'Años',
+    };
+
 
     return (
         <div key={key} className={`${small ? 'ps-5' : 'ps-0'} mt-1`}>
             <div className={`flex justify-between items-center mb-1 text-gunmetal-500 dark:text-gunmetal-200`}>
                 <h1 className={`${small ? 'text-sm' : 'text-lg'} font-semibold`}>{title}</h1>
-                <h2 className={`text-xs`}>{years} years</h2>
+                <h2 className={`text-xs`}>{years} {yearsTitle[language]}</h2>
             </div>
             <div className="w-full bg-gray-200 rounded-full dark:bg-gray-700">
                 <motion.div

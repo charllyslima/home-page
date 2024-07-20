@@ -8,6 +8,7 @@ export enum Technologies {
     CI_CD = 'CI/CD',
     DOCKER = 'Docker',
     FLUTTER = 'Flutter',
+    NATIVESCRIPT = 'NativeScript',
     JAVA = 'Java',
     CSS = 'CSS',
     BUILD_TOOLS = 'Build Tools'
@@ -160,6 +161,11 @@ export const comboSkill: { [key in Technologies]: Skills } = {
     },
     [Technologies.FLUTTER]: {
         title: Technologies.FLUTTER,
+        years: 1,
+        sub_item: []
+    },
+    [Technologies.NATIVESCRIPT]: {
+        title: Technologies.NATIVESCRIPT,
         years: 1,
         sub_item: []
     },
