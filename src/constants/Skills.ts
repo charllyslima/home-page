@@ -8,6 +8,7 @@ export enum Technologies {
     CI_CD = 'CI/CD',
     DOCKER = 'Docker',
     FLUTTER = 'Flutter',
+    NATIVESCRIPT = 'NativeScript',
     JAVA = 'Java',
     CSS = 'CSS',
     BUILD_TOOLS = 'Build Tools'
@@ -73,7 +74,7 @@ export const comboSkill: { [key in Technologies]: Skills } = {
         sub_item: [
             {
                 title: "MySQL",
-                years: 2
+                years: 8
             },
             {
                 title: "SQL Server",
@@ -123,11 +124,11 @@ export const comboSkill: { [key in Technologies]: Skills } = {
     },
     [Technologies.GIT]: {
         title: Technologies.GIT,
-        years: 2,
+        years: 8,
         sub_item: [
             {
                 title: "GitHub",
-                years: 2
+                years: 8
             },
             {
                 title: "GitLab",
@@ -163,9 +164,14 @@ export const comboSkill: { [key in Technologies]: Skills } = {
         years: 1,
         sub_item: []
     },
+    [Technologies.NATIVESCRIPT]: {
+        title: Technologies.NATIVESCRIPT,
+        years: 1,
+        sub_item: []
+    },
     [Technologies.CSS]: {
         title: Technologies.CSS,
-        years: 1,
+        years: 8,
         sub_item: [
             {
                 title: "Bootstrap 3/4/5",
@@ -187,11 +193,11 @@ export const comboSkill: { [key in Technologies]: Skills } = {
         sub_item: [
             {
                 title: "Vite",
-                years: 5
+                years: 3
             },
             {
                 title: "WebPack",
-                years: 2
+                years: 1
             },
         ]
     },

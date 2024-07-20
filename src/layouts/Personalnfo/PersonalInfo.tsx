@@ -38,8 +38,8 @@ const PersonalInfo = () => {
                 <div className={`p-3 w-full rounded-lg bg-gunmetal-100 dark:bg-gunmetal-800 py-5`}>
                     <div className="flex my-2.5 gap-3">
                         <div>
-                            <Icon icon={<MdOutlinePhoneAndroid className={'w-10 h-10'}/>}
-                                  textColor={`text-[#FF4242] cursor-pointer`}/>
+                            <Icon icon={<MdOutlinePhoneAndroid className={'w-[25px] h-[25px]'}/>}
+                                  textColor={`text-[#FF4242]`}/>
                         </div>
                         <ContentItem title={phoneTitle[language]} value={'+55 84 9 9475 - 3159'}
                                      link={'tel:+5584994753159'}/>
@@ -47,27 +47,19 @@ const PersonalInfo = () => {
                     <Separator/>
                     <div className="flex my-2.5 gap-3 w-100">
                         <div>
-                            <Icon icon={<FaMapMarkerAlt className={'w-10 h-10'}/>}
-                                  textColor={`text-[#8FD5A6] cursor-pointer`}/>
+                            <Icon icon={<FaMapMarkerAlt className={'w-[25px] h-[25px]'}/>}
+                                  textColor={`text-[#8FD5A6]`}/>
                         </div>
                         <ContentItem title={locationTitle[language]} value={'Rio de Janeiro - RJ'}/>
                     </div>
                     <Separator/>
                     <div className="flex my-2.5 gap-3 w-100">
                         <div>
-                            <Icon icon={<IoMailOpenSharp className={'w-10 h-10'}/>}
-                                  textColor={`text-delftBlue-300 cursor-pointer`}/>
+                            <Icon icon={<IoMailOpenSharp className={'w-[25px] h-[25px]'}/>}
+                                  textColor={`text-delftBlue-300`}/>
                         </div>
                         <ContentItem title={mailTitle[language]} value={'charllys.lima@outlook.com'}
                                      link={'mailto:charllys.lima@outlook.com'}/>
-                    </div>
-                    <Separator/>
-                    <div className="flex my-2.5 gap-3 w-100">
-                        <div>
-                            <Icon icon={<FaCalendarAlt className={'w-10 h-10'}/>}
-                                  textColor={`text-periwinkle-800 cursor-pointer`}/>
-                        </div>
-                        <ContentItem title={birthday[language].title} value={birthday[language].value}/>
                     </div>
                 </div>
             </div>

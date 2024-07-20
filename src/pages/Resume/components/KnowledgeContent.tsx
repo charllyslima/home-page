@@ -27,6 +27,7 @@ const KnowledgeContent: React.FC<KnowledgeContentProps> = ({knowledgeSkill}) => 
         [
             comboSkill[Technologies.JAVA],
             comboSkill[Technologies.FLUTTER],
+            comboSkill[Technologies.NATIVESCRIPT],
         ],
         [
             comboSkill[Technologies.PYTHON],
@@ -43,7 +44,7 @@ const KnowledgeContent: React.FC<KnowledgeContentProps> = ({knowledgeSkill}) => 
         ],
         [
             comboSkill[Technologies.PHP],
-            comboSkill[Technologies.JS_TS],
+            comboSkill[Technologies.CSHARP],
             comboSkill[Technologies.DATABASE],
         ],
         [
