@@ -1,5 +1,5 @@
 import myImage from "@img/me.jpg";
-import {FaCalendarAlt, FaMapMarkerAlt} from "react-icons/fa";
+import {FaMapMarkerAlt} from "react-icons/fa";
 import {IoMailOpenSharp} from "react-icons/io5";
 import {Button} from "flowbite-react";
 import {HiCloudDownload} from "react-icons/hi";
@@ -11,7 +11,6 @@ import useLanguage from "@/hooks/useLanguage";
 import ContentItem from "@/layouts/Personalnfo/components/ContentItem";
 import {motion} from "framer-motion";
 import {
-    birthday,
     cvLink,
     locationTitle,
     mailTitle,
