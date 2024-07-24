@@ -52,7 +52,7 @@ const Layout: React.FC<LayoutProps> = ({children}) => {
                     <aside className="lg:sticky lg:h-[75vh] lg:top-[110px] px-6">
                         <PersonalInfo/>
                     </aside>
-                    <main className="lg:w-7/12 rounded-3xl px-6 sm:pb-20 md:pb-32">
+                    <main className="lg:w-7/12 rounded-3xl px-6 sm:pb-20 md:pb-32 sm:mb-20 md:mb-0">
 
                         <div className="border-0 rounded-3xl dark:text-white bg-white dark:bg-spaceCadet-900">
                             <header className={`px-10 pt-10`}>

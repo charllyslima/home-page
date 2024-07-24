@@ -5,7 +5,7 @@ import {motion} from "framer-motion"
 
 const About = () => {
 
-    const language = useLanguage();
+    const language = useLanguage()
 
     return <section className="px-10 py-3 space-y-7" id={`about`}>
         <p className={`dark:text-silver text-gunmetal-500 dark:text-greyScale-500 flex flex-col gap-4`}
@@ -22,7 +22,7 @@ const About = () => {
                         className="w-full"
                     >
                         <div
-                            className="max-w-md p-3 justify-start flex flex-col h-full rounded shadow gap-3"
+                            className="p-3 justify-start flex flex-col h-full rounded shadow gap-3"
                             style={{backgroundColor: el.icon.color + '12'}}
                         >
                             <h1 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white flex items-center">
